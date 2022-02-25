@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <Nav/>
-    <Form />
-  </div>
 
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: "TodoItem"
 }
 </script>
+
+<style scoped>
+
+</style>
