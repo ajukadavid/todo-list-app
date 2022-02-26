@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="bg-green-100">
     <Nav/>
-    <Form />
+    <Form @addTodo="addTodo"/>
 
     <TodoItem :todos="todos"/>
   </div>
@@ -14,16 +14,13 @@ export default {
   data() {
     return {
       todos: [
-        {
-          name: 'Do 2h Merch',
-        },
-        {
-          name: 'Learn Vuex',
-        },
-        {
-          name: 'Learn Typescript',
-        }
+
       ]
+    }
+},
+methods: {
+    addTodo(value){
+      this.todos.push(value)
     }
 }
 }
