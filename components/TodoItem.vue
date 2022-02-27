@@ -5,6 +5,7 @@
       v-for="(todo, index) in todos"
       :key="todo"
     >
+    <input type="checkbox" id="todo" name="todo" :value="todo">
      <span class="text-3xl">{{ todo }} </span>
       <button @click="deleteTodo(index)">Delete item</button>
     </li>
