@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-green-100">
+  <div class="bg-green-100 h-screen">
     <Nav/>
     <Form @addTodo="addTodo"/>
 
-    <TodoItem :todos="todos"/>
+    <TodoItem :todos="todos" v-if="todos !== []"/>
   </div>
 
 </template>

@@ -31,10 +31,9 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 .wrapper {
-  font-family: 'Shizuru', cursive;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .text-field {

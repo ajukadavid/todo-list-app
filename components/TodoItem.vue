@@ -1,7 +1,7 @@
 <template>
-<div>
-  <ul>
-    <li
+<div v-if="todos">
+  <transition-group name="list" tag="ul">
+    <li class="list-item"
       v-for="(todo, index) in todos"
       :key="todo"
     >
@@ -10,7 +10,7 @@
       <button @click="deleteTodo(index)">Delete item</button>
     </li>
 
-  </ul>
+  </transition-group>
 
 </div>
 </template>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 li {
   list-style-type: none;
   display: flex;
@@ -44,8 +44,7 @@ div {
 }
 span {
   font-size: 28px;
-  font-family: 'Shizuru', cursive;
-
+  font-family: 'Open Sans', sans-serif;
 }
 button {
   border: 1px solid aquamarine;
@@ -55,6 +54,18 @@ button {
   color: white;
   margin: 8px;
   font-size: 18px;
-  font-family: 'Shizuru', cursive;
+  font-family: 'Open Sans', sans-serif;}
+
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 0.5s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(10px);
 }
 </style>
